@@ -1,0 +1,5 @@
+sign up: 
+    first name, last name, email[multiple and main one], password, dateofbirth, placeofbirth, terms and conditions
+
+- create common func compo for inputs
+- add generic bootstrap style

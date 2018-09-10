@@ -1,19 +1,35 @@
 import React, { Component } from "react";
+import { addUser } from "../actions/usersActions";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      user: {
+        first_name: "",
+        last_name: "",
+        email: "",
+        profession: "",
+        country: "",
+        Username: "",
+        password: ""
+      }
+    };
+  }
+
+  submitData(e) {
+    e.preventDefault();
+    console.log("submit");
+    addUser("hello");
   }
 
   render() {
     return (
       <div className="container">
-        <form
-          className="well form-horizontal"
-          action=" "
-          method="post"
-          id="contact_form"
-        >
+        <form className="well form-horizontal" onSubmit={this.submitData}>
           <fieldset>
             <legend>
               <center>

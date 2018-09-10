@@ -1,5 +1,2 @@
-sign up: 
-    first name, last name, email[multiple and main one], password, dateofbirth, placeofbirth, terms and conditions
-
+- set up mongoose and models, bind onchange, on submit, add to db and get from db
 - create common func compo for inputs
-- add generic bootstrap style

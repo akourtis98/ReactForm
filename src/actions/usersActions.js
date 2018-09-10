@@ -22,16 +22,17 @@ export const getUsers = () => dispatch => {
 };
 
 // Register User
-export const addUser = (data, history) => dispatch => {
-  axios
-    .post("http://localhost:5000/routes/add-new", data)
-    .then(res => history.push("/users"))
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
+export const addUser = data => dispatch => {
+  console.log("Reached");
+  // axios
+  //   .post("http://localhost:5000/routes/add-new", data)
+  //   .then(res => history.push("/users"))
+  //   .catch(err =>
+  //     dispatch({
+  //       type: GET_ERRORS,
+  //       payload: err.response.data
+  //     })
+  //   );
 };
 
 // loading

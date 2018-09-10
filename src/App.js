@@ -2,7 +2,8 @@ import React from "react";
 import Footer from "./Nav/Footer";
 import Header from "./Nav/Header";
 import Main from "./Main";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap-theme.css";
 
 const App = () => {
   return (

@@ -2,9 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <a href="/users">See users</a>
-      <nav className="navbar navbar-default navbar-fixed-top">
+    <header>
+      <nav className="navbar navbar-default fixed-top">
         <div className="container">
           <div className="navbar-header">
             <button
@@ -26,14 +25,14 @@ const Header = () => {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
-              <li className="active">
+              <li>
                 <a href="/">Sign up</a>
               </li>
               <li>
                 <a href="/users">See users</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Other</a>
               </li>
               <li className="dropdown">
                 <a
@@ -46,44 +45,25 @@ const Header = () => {
                 >
                   Dropdown <span className="caret" />
                 </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a href="#">Action</a>
-                  </li>
-                  <li>
-                    <a href="#">Another action</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else here</a>
-                  </li>
-                  <li role="separator" className="divider" />
-                  <li className="dropdown-header">Nav header</li>
-                  <li>
-                    <a href="#">Separated link</a>
-                  </li>
-                  <li>
-                    <a href="#">One more separated link</a>
-                  </li>
-                </ul>
               </li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="../navbar/">Default</a>
+                <a href="../navbar/">Facebook</a>
               </li>
               <li>
-                <a href="../navbar-static-top/">Static top</a>
+                <a href="../navbar-static-top/">LinkedIn</a>
               </li>
-              <li className="active">
+              <li>
                 <a href="./">
-                  Fixed top <span className="sr-only">(current)</span>
+                  Github <span className="sr-only" />
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

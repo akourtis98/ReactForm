@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import UsersTable from "./UsersTable";
-import SignUpFrom from "./SignUpFrom";
+import { Provider } from "react-redux";
+import UsersTable from "./components/UsersTable";
+import SignUpFrom from "./components/SignUpFrom";
+
+import store from "./store";
 
 const Main = () => (
   <main>
-    <Switch>
-      <Route exact path="/" component={SignUpFrom} />
-      <Route path="/users" component={UsersTable} />
-    </Switch>
+    <Provider store={store}>
+      <Switch>
+        <Route exact path="/users" component={UsersTable} />
+        <Route path="/*" component={SignUpFrom} />
+      </Switch>
+    </Provider>
   </main>
 );
 

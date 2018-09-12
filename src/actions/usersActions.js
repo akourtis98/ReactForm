@@ -23,9 +23,9 @@ export const getUsers = () => dispatch => {
 
 // Register User
 export const addUser = (data, history) => dispatch => {
-  // Object.keys(data).map(key => {
-  //   console.log(key + ": " + data[key]);
-  // });
+  Object.keys(data).map(key => {
+    console.log(key + ": " + data[key]);
+  });
   console.log("USERNAME: " + data.username);
   axios
     .post("http://localhost:5000/routes/users/add", data)

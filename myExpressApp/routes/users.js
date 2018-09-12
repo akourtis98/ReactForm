@@ -11,33 +11,25 @@ const User = require("../Models/User");
 
 /* GET users. */
 router.get("/get", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      firstname: "Matt",
-      lastname: "BBQ Brawlers"
-    },
-    {
-      id: 2,
-      firstname: "Peter",
-      lastname: "BBQ Peter Brawlers"
-    }
-  ]);
+  User.find()
+    .sort({ date: -1 })
+    .then(user => res.json(user))
+    .catch(err => res.status(404).json({ nopostsfound: "No users found" }));
 });
 
 /* Register user */
 router.post("/add", (req, res) => {
-  // const { errors, isValid } = validateRegisterInput(req.body);
+  const { errors, isValid } = validateRegisterInput(req.body);
 
-  // // Check Validation
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
+  // Check Validation
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
-  const newUser = new User({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password
+  const newUser = new User();
+
+  Object.keys(req.body).map(key => {
+    newUser[key] = req.body[key];
   });
 
   bcrypt.genSalt(10, (err, salt) => {

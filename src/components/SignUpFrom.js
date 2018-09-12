@@ -56,7 +56,7 @@ class SignUpForm extends Component {
       { label: "Manager", value: "Manager" }
     ];
 
-    const { errors } = this.props;
+    const errors = this.props.errors;
 
     return (
       <div className="container">
@@ -90,7 +90,7 @@ class SignUpForm extends Component {
               name="email"
               placeholder="Email"
               label="Email"
-              type="text"
+              type="email"
               onChange={this.onChange}
               errors={errors.email}
             />

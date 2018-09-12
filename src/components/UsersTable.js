@@ -22,19 +22,25 @@ class UsersTable extends Component {
           <table className="table">
             <thead className="grey lighten-2">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Username</th>
+                <th scope="col">Country</th>
+                <th scope="col">Profession</th>
               </tr>
             </thead>
             {users.map(user => (
-              <tbody key={user.id}>
+              <tbody key={user._id}>
                 <tr>
-                  <th scope="row">{user.id}</th>
-                  <td>{user.firstname}</td>
-                  <td>{user.lastname}</td>
-                  <td>{user.firstname}</td>
+                  <td scope="row">{user.first_name}</td>
+                  <td scope="row">{user.last_name}</td>
+                  <td scope="row">{user.email}</td>
+                  <td scope="row">{user.psassword}</td>
+                  <td scope="row">{user.username}</td>
+                  <td scope="row">{user.country}</td>
+                  <td scope="row">{user.profession}</td>
                 </tr>
               </tbody>
             ))}

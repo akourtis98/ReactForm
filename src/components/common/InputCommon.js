@@ -29,10 +29,10 @@ const InputCommon = ({
             placeholder={placeholder}
           />
           <small className="form-text text-muted">{info}</small>
-          <div className="invalid-feedback">
-            <h5>{errors}</h5>
-          </div>
         </div>
+      </div>
+      <div className="invalid-feedback">
+        <h5>{errors}</h5>
       </div>
     </div>
   );

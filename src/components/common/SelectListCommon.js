@@ -26,9 +26,9 @@ const SelectListCommon = ({ name, errors, label, info, onChange, options }) => {
             {selectOptions}
           </select>
           <small className="form-text text-muted">{info}</small>
-          <div className="invalid-feedback">{errors} </div>
         </div>
       </div>
+      <div className="invalid-feedback">{errors} </div>
     </div>
   );
 };

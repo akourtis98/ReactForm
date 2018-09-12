@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import UsersTable from "./components/UsersTable";
-import SignUpFrom from "./components/SignUpFrom";
+import SignUpFrom from "./components/SignUpForm";
 
 import store from "./store";
 

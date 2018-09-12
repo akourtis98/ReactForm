@@ -97,7 +97,7 @@ class SignUpForm extends Component {
             <InputCommon
               name="password"
               placeholder="Paaword"
-              label="Paaword"
+              label="Password"
               type="password"
               onChange={this.onChange}
               errors={errors.password}
@@ -105,7 +105,7 @@ class SignUpForm extends Component {
             <InputCommon
               name="password2"
               placeholder="Confirm password"
-              label="password2"
+              label="Password Confirmation"
               type="password"
               onChange={this.onChange}
               errors={errors.password2}

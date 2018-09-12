@@ -1,2 +1,2 @@
-- set up mongoose and models, bind onchange, on submit, add to db and get from db
+- set up mongoose and, add to db and get from db
 - create common func compo for inputs

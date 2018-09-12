@@ -1,17 +1,34 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var cors = require("cors");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const passport = require("passport");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+const usersRouter = require("./routes/users");
 
-var app = express();
+const app = express();
 
 // Body parser middleware
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
+
+const db = require("./config/keys.js").mongoURI;
+
+// Connect to mongodb
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true }
+  )
+  .catch(err => console.log(err));
+
+// passport middleware
+app.use(passport.initialize());
+
+// passport config
+require("./config/passport")(passport);
 
 // cors
 app.use(
@@ -20,10 +37,9 @@ app.use(
   })
 );
 
-app.use("/", indexRouter);
 app.use("/routes/users", usersRouter);
 
-var port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 

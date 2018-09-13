@@ -42,18 +42,20 @@ class SignUpForm extends Component {
 
   render() {
     const optionsProf = [
-      { label: "Student or Learning", value: "Student or Learning" },
-      { label: "Instructor or Teacher", value: "Instructor or Teacher" },
-      { label: "Intern", value: "Intern" },
-      { label: "Other", value: "Other" }
+      { label: "Select profession", value: 0 },
+      { label: "Programmer", value: "Programmer" },
+      { label: "Accountant", value: "Accountant" },
+      { label: "Teacher", value: "Teacher" },
+      { label: "Builder", value: "Builder" }
     ];
 
     const optionsCountry = [
-      { label: "* Select Professional Status", value: 0 },
-      { label: "Developer", value: "Developer" },
-      { label: "Junior Developer", value: "Junior Developer" },
-      { label: "Senior Developer", value: "Senior Developer" },
-      { label: "Manager", value: "Manager" }
+      { label: "Select Country", value: 0 },
+      { label: "Greece", value: "Greece" },
+      { label: "USA", value: "USA" },
+      { label: "Canada", value: "Canada" },
+      { label: "Austria", value: "Austria" },
+      { label: "Australia", value: "Australia" }
     ];
 
     const errors = this.props.errors;
@@ -122,7 +124,7 @@ class SignUpForm extends Component {
             <SelectListCommon
               name="country"
               placeholder="Country"
-              label="country"
+              label="Country"
               onChange={this.onChange}
               errors={errors.country}
               options={optionsCountry}
@@ -130,7 +132,7 @@ class SignUpForm extends Component {
             <SelectListCommon
               name="profession"
               placeholder="Select your profession"
-              label="profession"
+              label="Profession"
               onChange={this.onChange}
               options={optionsProf}
               errors={errors.profession}

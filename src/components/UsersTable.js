@@ -25,7 +25,6 @@ class UsersTable extends Component {
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Password</th>
                 <th scope="col">Username</th>
                 <th scope="col">Country</th>
                 <th scope="col">Profession</th>
@@ -37,7 +36,6 @@ class UsersTable extends Component {
                   <td scope="row">{user.first_name}</td>
                   <td scope="row">{user.last_name}</td>
                   <td scope="row">{user.email}</td>
-                  <td scope="row">{user.psassword}</td>
                   <td scope="row">{user.username}</td>
                   <td scope="row">{user.country}</td>
                   <td scope="row">{user.profession}</td>

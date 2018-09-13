@@ -32,11 +32,9 @@ module.exports = function validateRegisterInput(data) {
     errors.email = "Email is invalid";
   }
   if (!data.password.match(/^[^\W_]+$/)) {
-    //
     errors.password = "Password cannot contain symbols or spaces";
   }
   if (!data.password2.match(/^[^\W_]+$/)) {
-    //
     errors.password2 = "Password cannot contain symbols or spaces";
   }
   if (validator.isEmpty(data.password)) {
@@ -48,8 +46,8 @@ module.exports = function validateRegisterInput(data) {
   if (!validator.equals(data.password, data.password2)) {
     errors.password2 = "Passwords should match";
   }
-  if (validator.isLength(data.password, { min: 3, max: 30 })) {
-    errors.password = "Password must be atleast 3 characters and max 30";
+  if (!validator.isLength(data.password, { min: 3, max: 15 })) {
+    errors.password = "Password must be atleast 3 characters and max 15";
   }
 
   return {

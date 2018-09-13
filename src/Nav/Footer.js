@@ -7,13 +7,6 @@ const Footer = () => {
         <p className="navbar-text pull-left">
           © 2018 - Site Built By Alexandros Kourtis
         </p>
-
-        <a
-          href="http://youtu.be/zJahlKPCL9g"
-          className="navbar-btn btn-warning peach-gradient btn pull-right"
-        >
-          <span className="glyphicon" /> Visit my website
-        </a>
       </div>
     </div>
   );

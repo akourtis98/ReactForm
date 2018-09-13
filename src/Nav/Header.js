@@ -19,7 +19,7 @@ const Header = () => {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               Project name
             </a>
           </div>
@@ -31,31 +31,18 @@ const Header = () => {
               <li>
                 <a href="/users">See users</a>
               </li>
-              <li>
-                <a href="#contact">Other</a>
-              </li>
-              <li className="dropdown">
-                <a
-                  href="#"
-                  className="dropdown-toggle"
-                  data-toggle="dropdown"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown <span className="caret" />
-                </a>
-              </li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="../navbar/">Facebook</a>
+                <a href="http://alexkourtis.net/">Personal Website</a>
               </li>
               <li>
-                <a href="../navbar-static-top/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/alexandros-kourtis/">
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <a href="./">
+                <a href="https://github.com/akourtis98">
                   Github <span className="sr-only" />
                 </a>
               </li>

@@ -12,11 +12,11 @@ class UsersTable extends Component {
   }
 
   render() {
-    const { users } = this.props.users;
+    const { users, loading } = this.props.users;
 
     let table;
 
-    if (users) {
+    if (!loading) {
       table = (
         <div className="container">
           <table className="table">
@@ -55,11 +55,13 @@ class UsersTable extends Component {
 
 UsersTable.propTypes = {
   getUsers: PropTypes.func.isRequired,
-  users: PropTypes.object.isRequired
+  users: PropTypes.object.isRequired,
+  loading: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  users: state.users
+  users: state.users,
+  loading: state.users
 });
 
 export default connect(

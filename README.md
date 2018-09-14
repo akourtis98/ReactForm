@@ -2,7 +2,7 @@
   
   
 ## React Sign up form and users table
-> this is supposed to be a very simple project making use of react and redux
+> This is supposed to be a very simple project making use of react and redux
 
 
 ## To start it up

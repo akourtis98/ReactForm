@@ -1,2 +1,0 @@
-- set up mongoose and, add to db and get from db
-- create common func compo for inputs
